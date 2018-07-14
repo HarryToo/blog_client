@@ -1,0 +1,113 @@
+input {
+    padding: 0 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    color: #606266;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.empty_tips {
+    min-height: calc(100vh - 163px);
+    padding-top: 60px;
+    text-align: center;
+    color: #bbb;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.empty_tips:after {
+    content: '😭 暂无相关内容';
+}
+
+.column_header {
+    margin-bottom: 6px;
+    line-height: 24px;
+    border-left: 3px solid #41b883;
+    font-size: 14px;
+}
+
+.column_header i {
+    color: #41b883;
+    padding: 0 6px;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: 0.3s;
+}
+
+.page-enter, .page-leave-active {
+    opacity: 0;
+    transform: translateX(-100vw);
+}
+
+@keyframes bubbling {
+    from {
+        top: 110%;
+        transform: rotate(0) scale(1);
+    }
+    to {
+        top: -5%;
+        transform: rotate(360deg) scale(1.8);
+    }
+}
+
+.el-textarea textarea {
+    background-color: transparent !important;
+}
+
+.el-carousel__indicator.is-active button {
+    background-color: #41b883;
+}
+
+.dataTable .ql-toolbar.ql-snow, .about .ql-toolbar.ql-snow {
+    line-height: normal;
+}
+
+.dataTable .ql-tooltip {
+    left: 0 !important;
+}
+
+.dataTable .el-transfer-panel__filter {
+    margin: 10px;
+}
+
+.dataTable .el-transfer-panel__list.is-filterable {
+    padding-bottom: 36px;
+}
+
+.hljs {
+    border-left: 2px solid rgba(65, 184, 131, 0.5);
+    padding-left: 8px;
+    line-height: 18px;
+    color: #555;
+    font-family: "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+.ql-editor {
+    padding: 0;
+}
+
+.ql-editor p {
+    text-indent: 2em;
+    padding: 4px 0;
+}
+
+.ql-editor img {
+    /*max-width: calc(100% - 2em);*/
+    max-width: 100%;
+    margin: 10px 0 10px -2em;
+}
+
+.ql-editor a {
+    color: #41b883;
+}
