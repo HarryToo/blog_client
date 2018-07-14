@@ -4,5 +4,5 @@ module.exports = {
     options: {
         scope: 'blog'
     },
-    domain: 'http://pb0i7qivs.bkt.clouddn.com'
+    domain: 'http://image.doinblog.com'
 };

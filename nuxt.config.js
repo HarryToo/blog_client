@@ -20,10 +20,12 @@ module.exports = {
         '@nuxtjs/axios',
         '@nuxtjs/proxy'
     ],
+    axios: {
+        proxy: true
+    },
     proxy: {
         '/api': {
-            target: 'http://localhost:3001/',
-            pathRewrite: {'^/api': '/'}
+            target: 'https://www.doinblog.com/'
         },
         '/juhe': {
             target: 'https://v.juhe.cn/',
