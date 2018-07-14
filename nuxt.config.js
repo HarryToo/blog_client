@@ -26,7 +26,7 @@ module.exports = {
             pathRewrite: {'^/api': '/'}
         },
         '/juhe': {
-            target: 'http://v.juhe.cn/',
+            target: 'https://v.juhe.cn/',
             pathRewrite: {'^/juhe': '/'}
         }
     },
