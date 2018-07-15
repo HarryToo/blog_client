@@ -2,7 +2,7 @@
     <div class="news">
         <div class="container">
             <div class="wrapper" v-if="newsList && newsList.length">
-                <i class="refresh_btn el-icon-refresh" title="刷新" v-show="pageIndex===newsList.length-1" @click="refreshNews"></i>
+                <i class="refresh_btn iconfont icon-shuaxin" title="刷新" v-show="pageIndex===newsList.length-1" @click="refreshNews"></i>
                 <div class="item" v-for="item in newsList[pageIndex]" :key="item.uniquekey"
                      :style="{'background-image':`url(${item.thumbnail_pic_s||''})`}" @click="openDetail(item.url)">
                     <div class="cont">
@@ -19,8 +19,8 @@
                         </p>
                     </div>
                 </div>
-                <i class="page_btn page_prev el-icon-arrow-left" title="上一页" v-show="pageIndex>0" @click="pageIndex--"></i>
-                <i class="page_btn page_next el-icon-arrow-right" title="下一页" v-show="pageIndex<newsList.length-1" @click="pageIndex++"></i>
+                <i class="page_btn page_prev iconfont icon-xiangzuo1" title="上一页" v-show="pageIndex>0" @click="pageIndex--"></i>
+                <i class="page_btn page_next iconfont icon-xiangyou1" title="下一页" v-show="pageIndex<newsList.length-1" @click="pageIndex++"></i>
             </div>
             <p v-else class="empty_tips"></p>
         </div>
@@ -139,6 +139,7 @@
                     background-color: rgba(255, 255, 255, 0.95);
                     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
                     &:hover {
+                        color: #41b883;
                         transform: rotate(-90deg);
                     }
                 }
