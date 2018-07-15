@@ -5,7 +5,7 @@
             <li class="submenu">
                 <header @click="submenuShow = !submenuShow">
                     <span>标签</span>
-                    <i :class="submenuShow?'el-icon-arrow-up':'el-icon-arrow-down'"></i>
+                    <i :class="`iconfont ${submenuShow?'icon-xiangshang2':'icon-xiangxia2'}`"></i>
                 </header>
                 <div class="submenuList_wrapper">
                     <transition name="slide-down">

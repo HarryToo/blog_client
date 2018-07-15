@@ -15,7 +15,7 @@ module.exports = {
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
             {rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'},
-            {rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_648952_2i7zjt8sae5.css'},
+            {rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_648952_7lvn6hxxk8q.css'},
             {rel: 'stylesheet', href: 'https://cdn.staticfile.org/Swiper/4.3.3/css/swiper.min.css'}
         ]
     },

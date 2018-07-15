@@ -86,7 +86,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px 10px 20px;
+            padding: 10px 10px 25px;
             border-radius: 4px;
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
