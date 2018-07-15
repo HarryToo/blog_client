@@ -118,7 +118,7 @@
             for (let i = 0; i < imgs.length; i++) {
                 imgs[i].addEventListener('click', () => {
                     this.viewImgUrl = imgs[i].src;
-                    document.querySelector('html').style.overflowY = 'hidden';
+                    this.banSlide(true);
                 });
             }
         },
@@ -132,7 +132,16 @@
             },
             closePictureView() {
                 this.viewImgUrl = '';
-                document.querySelector('html').style.overflowY = 'auto';
+                this.banSlide(false);
+            },
+            banSlide(flag) {
+                if (flag) {
+                    document.querySelector('html').style.overflowY = 'hidden';
+                    document.querySelector('body').style.overflowY = 'hidden';
+                } else {
+                    document.querySelector('html').style.overflowY = 'auto';
+                    document.querySelector('body').style.overflowY = 'auto';
+                }
             }
         }
     }
@@ -158,7 +167,7 @@
                 .main {
                     margin-bottom: 6px;
                     padding: 10px;
-                    background-color: rgba(255, 255, 255, .95);
+                    background-color: rgba(255, 255, 255, .9);
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
                     border-radius: 4px;
                     header {

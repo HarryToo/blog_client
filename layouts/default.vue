@@ -1,7 +1,7 @@
 <template>
     <div id="layout" :style="{'background-image': `url(${backdrop})`}">
         <vheader :logoSrc="logoSrc"></vheader>
-        <main style="min-height: calc(100vh - 120px);">
+        <main>
             <nuxt/>
         </main>
         <vfooter :text="footerText"></vfooter>
@@ -75,6 +75,9 @@
         overflow-x: hidden;
         @media screen and (max-width: 768px) {
             padding-top: 60px;
+        }
+        main {
+            min-height: calc(100vh - 110px);
         }
         .back_top {
             position: fixed;

@@ -58,7 +58,7 @@
         watch: {
             $route: function () {
                 this.showMobileNav = false;
-                document.querySelector('html').style.overflowY = 'auto';
+                this.banSlide(false);
             }
         },
         methods: {
@@ -73,11 +73,20 @@
             },
             openMobileNav() {
                 this.showMobileNav = true;
-                document.querySelector('html').style.overflowY = 'hidden';
+                this.banSlide(true);
             },
             closeMobileNav() {
                 this.showMobileNav = false;
-                document.querySelector('html').style.overflowY = 'auto';
+                this.banSlide(false);
+            },
+            banSlide(flag) {
+                if (flag) {
+                    document.querySelector('html').style.overflowY = 'hidden';
+                    document.querySelector('body').style.overflowY = 'hidden';
+                } else {
+                    document.querySelector('html').style.overflowY = 'auto';
+                    document.querySelector('body').style.overflowY = 'auto';
+                }
             }
         }
     }
@@ -109,7 +118,7 @@
     }
 
     header {
-        height: 60px;
+        height: 55px;
         line-height: 40px;
         padding: 10px 0;
         background-color: rgba(255, 255, 255, .95);
@@ -129,14 +138,14 @@
         .logo {
             width: 20%;
             font-size: 0;
-            padding: 6px 0;
+            padding: 5px 0;
             a, img {
                 display: inline-block;
                 vertical-align: top;
                 height: 100%;
-                img{
+                img {
                     transition: 1s;
-                    &:hover{
+                    &:hover {
                         transform: rotateY(360deg);
                     }
                 }
@@ -165,6 +174,7 @@
             left: 0;
             width: 30%;
             padding-left: 30px;
+            font-size: 0;
             .search-input {
                 width: 100%;
                 height: 100%;
@@ -193,7 +203,7 @@
             left: 0;
             padding: 0 10px;
             width: 100%;
-            height: 60px;
+            height: 55px;
             display: flex;
             justify-content: space-between;
             align-items: center;

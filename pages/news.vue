@@ -23,12 +23,6 @@
                 <i class="page_btn page_next el-icon-arrow-right" title="下一页" v-show="pageIndex<newsList.length-1" @click="pageIndex++"></i>
             </div>
             <p v-else class="empty_tips"></p>
-            <transition name="fly-in">
-                <div class="detail" v-show="showDetail">
-                    <i class="close_btn el-icon-close" @click="showDetail=false" title="关闭"></i>
-                    <iframe :src="currNewsUrl"></iframe>
-                </div>
-            </transition>
         </div>
     </div>
 </template>
@@ -70,9 +64,7 @@
         },
         data() {
             return {
-                pageIndex: 0,
-                showDetail: false,
-                currNewsUrl: ''
+                pageIndex: 0
             }
         },
         methods: {
@@ -99,8 +91,11 @@
                 });
             },
             openDetail(url) {
-                this.showDetail = true;
-                this.currNewsUrl = url;
+                try {
+                    window.open(url);
+                } catch (e) {
+                    location.href = url;
+                }
             }
         }
     }
@@ -118,10 +113,10 @@
     .news {
         padding: 6px 0;
         .container {
-            height: calc(100vh - 132px);
+            height: calc(100vh - 122px);
             padding: 10px;
             border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             position: relative;
             .wrapper {
@@ -141,7 +136,7 @@
                     cursor: pointer;
                     transition: 0.4s;
                     border-radius: 50%;
-                    background-color: rgba(255, 255, 255, 0.96);
+                    background-color: rgba(255, 255, 255, 0.95);
                     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
                     &:hover {
                         transform: rotate(-90deg);
@@ -262,7 +257,7 @@
                     transform: translateY(-50%);
                     padding: 10px;
                     font-size: 24px;
-                    background-color: rgba(255, 255, 255, 0.96);
+                    background-color: rgba(255, 255, 255, 0.95);
                     cursor: pointer;
                     transition: 0.4s;
                     &:hover {
@@ -288,7 +283,7 @@
                 width: 100%;
                 height: 100%;
                 padding: 10px 10px 0;
-                background-color: rgba(255, 255, 255, 0.96);
+                background-color: rgba(255, 255, 255, 0.9);
                 border-radius: 4px;
                 overflow-y: hidden;
                 .close_btn {
@@ -304,7 +299,7 @@
                     cursor: pointer;
                     transition: 0.4s;
                     border-radius: 50%;
-                    background-color: rgba(255, 255, 255, 0.96);
+                    background-color: rgba(255, 255, 255, 0.95);
                     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
                     &:hover {
                         transform: rotate(90deg);

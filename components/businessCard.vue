@@ -76,7 +76,7 @@
         .main {
             margin-bottom: 6px;
             padding: 15px 10px;
-            background-color: rgba(255, 255, 255, .95);
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 10px rgba(0, 0, 0, .05);
             border-radius: 4px;
             display: flex;
@@ -85,7 +85,7 @@
             align-items: center;
             cursor: pointer;
             &:hover {
-                background-color: rgba(255, 255, 255, 0.98);
+                background-color: rgba(255, 255, 255, 0.95);
                 border-color: #41b883;
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1), 2px 2px 10px rgba(65, 184, 131, 0.12);
             }

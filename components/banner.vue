@@ -111,7 +111,8 @@
                             left: 0;
                             bottom: 0;
                             width: 100%;
-                            padding: 10px;
+                            padding: 8px 10px;
+                            text-align: center;
                             font-weight: bold;
                             background-color: rgba(255, 255, 255, 0.8);
                             overflow: hidden;
@@ -147,7 +148,8 @@
                         left: 0;
                         bottom: 0;
                         width: 100%;
-                        padding: 8px 10px;
+                        padding: 6px 10px;
+                        text-align: center;
                         font-size: 14px;
                         font-weight: bold;
                         background-color: rgba(255, 255, 255, 0.8);

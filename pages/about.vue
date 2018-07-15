@@ -34,10 +34,10 @@
     .about {
         padding: 6px 0;
         .container {
-            min-height: calc(100vh - 132px);
+            min-height: calc(100vh - 122px);
             padding: 10px;
             border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             .ql-editor {
                 padding: 0;

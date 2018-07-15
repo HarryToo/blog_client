@@ -15,12 +15,11 @@ input {
 }
 
 .empty_tips {
-    min-height: calc(100vh - 163px);
-    padding-top: 60px;
+    padding: 100px;
     text-align: center;
     color: #bbb;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .empty_tips:after {
@@ -86,8 +85,8 @@ input {
 .hljs {
     border-left: 2px solid rgba(65, 184, 131, 0.5);
     padding-left: 8px;
-    line-height: 18px;
-    color: #555;
+    line-height: 20px;
+    color: #666;
     font-family: "Microsoft YaHei", "黑体", "宋体", sans-serif;
     border-radius: 4px;
     background-color: #f8f8f8;

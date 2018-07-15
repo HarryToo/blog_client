@@ -43,7 +43,7 @@
         .list {
             margin-bottom: 6px;
             padding: 6px;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             border-radius: 4px;
             overflow: hidden;

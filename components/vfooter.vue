@@ -16,8 +16,8 @@
 
 <style lang="scss" scoped>
     footer {
-        height: 60px;
-        line-height: 60px;
+        height: 55px;
+        line-height: 55px;
         background-color: rgba(255, 255, 255, .95);
         color: #999;
         font-size: 12px;

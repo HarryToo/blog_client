@@ -48,7 +48,7 @@
         height: 150px;
         margin-bottom: 6px;
         padding: 6px 6px 6px 3px;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(255, 255, 255, 0.9);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
         border-left: 3px solid transparent;
         border-radius: 4px;
@@ -109,7 +109,7 @@
             }
         }
         &:hover {
-            background-color: rgba(255, 255, 255, 0.98);
+            background-color: rgba(255, 255, 255, 0.95);
             border-color: #41b883;
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1), 2px 2px 10px rgba(65,184,131, 0.12);
             .cover {
