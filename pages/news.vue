@@ -256,7 +256,7 @@
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    padding: 10px;
+                    padding: 8px;
                     font-size: 24px;
                     background-color: rgba(255, 255, 255, 0.95);
                     cursor: pointer;
