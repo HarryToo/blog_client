@@ -67,7 +67,7 @@
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             display: flex;
-            .__vev_calendar-wrapper .cal-wrapper .cal-header{
+            .__vev_calendar-wrapper .cal-wrapper .cal-header {
                 background-color: transparent;
             }
             .__vev_calendar-wrapper .events-wrapper .event-item .desc {
