@@ -41,6 +41,10 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             .ql-editor {
                 padding: 0;
+                font-size: 15px;
+                p{
+                    padding: 4px 0;
+                }
                 img {
                     max-width: 100%;
                 }
