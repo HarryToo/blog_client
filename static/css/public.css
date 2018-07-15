@@ -91,11 +91,11 @@ input {
     color: #666;
     font-family: "Microsoft YaHei", "黑体", "宋体", sans-serif;
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8 !important;
 }
 
 .ql-editor {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .ql-editor p {
@@ -104,7 +104,6 @@ input {
 }
 
 .ql-editor img {
-    /*max-width: calc(100% - 2em);*/
     max-width: 100%;
     margin: 10px 0 10px -2em;
 }
