@@ -74,7 +74,7 @@
                     type: 'keji',
                     key: 'bc556aa89b1b8aff7fe367ec6755b647'
                 };
-                this.$axios.$get('/api/toutiao/index', {params}).then((res) => {
+                this.$axios.$get('/juhe/toutiao/index', {params}).then((res) => {
                     if (res.error_code === 0) {
                         let data = res.result.data;
                         let newArr = [];
