@@ -5,9 +5,7 @@
             <nuxt/>
         </main>
         <vfooter :text="footerText"></vfooter>
-        <div class="back_top" title="返回顶部" v-show="showBackTopBtn" @click="backTop">
-            <i class="el-icon-arrow-up"></i>
-        </div>
+        <div class="back_top" title="返回顶部" v-show="showBackTopBtn" @click="backTop"><span>︿</span></div>
     </div>
 </template>
 
@@ -74,21 +72,21 @@
         background-size: cover;
         overflow-x: hidden;
         @media screen and (max-width: 768px) {
-            padding-top: 60px;
+            padding-top: 55px;
         }
         main {
             min-height: calc(100vh - 110px);
         }
         .back_top {
             position: fixed;
-            right: 24px;
-            bottom: 24px;
-            width: 40px;
-            height: 40px;
+            right: 20px;
+            bottom: 20px;
+            width: 42px;
+            height: 42px;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px;
+            padding: 10px 10px 20px;
             border-radius: 4px;
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
@@ -97,7 +95,7 @@
             cursor: pointer;
             overflow: hidden;
             &:hover {
-                i {
+                span {
                     animation: backTop_animat1 0.3s linear, backTop_animat2 0.3s 0.3s linear;
                 }
             }

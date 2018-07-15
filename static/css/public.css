@@ -58,11 +58,13 @@ input {
     }
 }
 
-.el-textarea textarea {
-    background-color: transparent !important;
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 3px;
+    border-radius: 0;
 }
 
-.el-carousel__indicator.is-active button {
+.swiper-pagination-bullet-active {
     background-color: #41b883;
 }
 

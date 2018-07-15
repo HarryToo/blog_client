@@ -9,10 +9,14 @@ module.exports = {
             {hid: 'description', name: 'description', content: `${blog_name}, 杜航的个人博客`},
             {hid: 'keyword', name: 'keyword', content: `${blog_name}, 个人博客, 程序员, 前端开发, 编程`}
         ],
+        script: [
+            {src: 'https://cdn.staticfile.org/Swiper/4.3.3/js/swiper.min.js'}
+        ],
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
             {rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'},
-            {rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_648952_2i7zjt8sae5.css'}
+            {rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_648952_2i7zjt8sae5.css'},
+            {rel: 'stylesheet', href: 'https://cdn.staticfile.org/Swiper/4.3.3/css/swiper.min.css'}
         ]
     },
     loading: {color: '#41b883'},
@@ -43,22 +47,15 @@ module.exports = {
                 })
             }
         },
-        vendor: ['axios', '~/plugins/element-ui', '~/plugins/vue-quill-editor', '~/plugins/vue-highlight', '~/plugins/vue-event-calendar']
     },
     plugins: [
-        {src: '~/plugins/element-ui', ssr: true},
         {src: '~/plugins/vue-quill-editor.js', ssr: false},
         {src: '~/plugins/vue-highlight.js', ssr: true},
         {src: '~/plugins/vue-event-calendar.js', ssr: false}
     ],
     css: [
         'static/css/reset.css',
-        'static/css/public.css',
-        'element-ui/lib/theme-chalk/base.css',
-        'element-ui/lib/theme-chalk/carousel.css',
-        'element-ui/lib/theme-chalk/carousel-item.css',
-        'element-ui/lib/theme-chalk/input.css',
-        'element-ui/lib/theme-chalk/button.css'
+        'static/css/public.css'
     ],
     transition: {name: 'page'}
 };

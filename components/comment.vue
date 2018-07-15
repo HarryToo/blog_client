@@ -1,10 +1,10 @@
 <template>
     <div class="comment">
-        <header><i class="el-icon-edit" style="padding-right: 10px;"></i><span>评论</span></header>
-        <el-input type="textarea" :rows="5" placeholder="既然来了，留下点什么吧 ..." v-model="content"></el-input>
+        <header><i class="iconfont icon-mn_hudong"></i><span>留言</span></header>
+        <textarea placeholder="既然来了，留下点什么吧 ..." class="comment_cont" v-model="content"></textarea>
         <div style="padding: 10px 0;display: flex;justify-content: space-between;">
-            <el-input v-model="username" placeholder="留个名字吧" style="width: 80%;margin-right: 10px;"></el-input>
-            <el-button type="success" plain @click="submitComment">提交</el-button>
+            <input v-model="username" class="comment_user" placeholder="留个名字吧">
+            <button class="comment_btn" @click="submitComment">提交</button>
         </div>
         <ul class="comment_list" v-if="commentList.length">
             <li class="comment_item" v-for="(item, index) in commentList" :key="item.id">
@@ -101,6 +101,52 @@
         font-size: 14px;
         header {
             padding-bottom: 10px;
+            .iconfont{
+                padding-right: 6px;
+                vertical-align: middle;
+                color: #41b883;
+            }
+        }
+        .comment_cont {
+            width: 100%;
+            min-height: 10em;
+            padding: 6px 10px;
+            resize: vertical;
+            outline: none;
+        }
+        .comment_user {
+            width: 80%;
+            margin-right: 15px;
+            font-size: 14px;
+            padding: 10px;
+        }
+        .comment_cont, .comment_user {
+            border-color: #eee;
+            border-radius: 4px;
+            &::-webkit-input-placeholder {
+                color: #bbb;
+            }
+            &::-moz-placeholder {
+                color: #bbb;
+            }
+            &:-moz-placeholder {
+                color: #bbb;
+            }
+            &:-ms-input-placeholder {
+                color: #bbb;
+            }
+        }
+        .comment_btn {
+            width: 18%;
+            border: none;
+            outline: none;
+            background-color: rgba(65, 184, 131, 0.8);
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                background-color: #41b883;
+            }
         }
         .comment_list {
             padding-top: 10px;
