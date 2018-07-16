@@ -9,9 +9,6 @@ module.exports = {
             {hid: 'description', name: 'description', content: `${blog_name}, 杜航的个人博客`},
             {hid: 'keyword', name: 'keyword', content: `${blog_name}, 个人博客, 程序员, 前端开发, 编程`}
         ],
-        script: [
-            {src: 'https://cdn.staticfile.org/Swiper/4.3.3/js/swiper.min.js'}
-        ],
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
             {rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'},
@@ -50,8 +47,9 @@ module.exports = {
     },
     plugins: [
         {src: '~/plugins/vue-quill-editor.js', ssr: false},
-        {src: '~/plugins/vue-highlight.js', ssr: true},
-        {src: '~/plugins/vue-event-calendar.js', ssr: false}
+        {src: '~/plugins/vue-highlight.js', ssr: false},
+        {src: '~/plugins/vue-event-calendar.js', ssr: false},
+        {src: '~/plugins/vue-awesome-swiper.js', ssr: false}
     ],
     css: [
         'static/css/reset.css',

@@ -1,6 +1,6 @@
 <template>
     <div id="index">
-        <banner></banner>
+        <banner :bannerList="bannerList"></banner>
         <div class="container">
             <div class="cont">
                 <div class="left_cont">
@@ -24,12 +24,13 @@
             articleList,
             rightSide
         },
-        asyncData({app}) {
-            return app.$axios.$get('/api/article/getArticleList').then((res) => {
-                if (res.code === 200) {
-                    return {articleList: res.data};
-                }
-            });
+        async asyncData({app}) {
+            let articleRes = await app.$axios.$get('/api/article/getArticleList');
+            let bannerRes = await app.$axios.$get('/api/article/getArticleList', {params: {isOnlyTop: true}});
+            return {
+                articleList: articleRes.data,
+                bannerList: bannerRes.data
+            }
         },
         data() {
             return {
@@ -42,7 +43,7 @@
             window.scrollTo(0, 0);
             window.addEventListener('scroll', this.scrollHandle);
         },
-        beforeDestroy(){
+        beforeDestroy() {
             window.removeEventListener('scroll', this.scrollHandle);
         },
         methods: {

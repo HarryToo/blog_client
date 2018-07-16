@@ -59,13 +59,13 @@ input {
 }
 
 .swiper-pagination-bullet {
-    width: 20px;
-    height: 3px;
-    border-radius: 0;
+    width: 20px !important;
+    height: 3px !important;
+    border-radius: 0 !important;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #41b883;
+    background-color: #41b883 !important;
 }
 
 .dataTable .ql-toolbar.ql-snow, .about .ql-toolbar.ql-snow {

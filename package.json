@@ -16,10 +16,11 @@
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/proxy": "^1.2.4",
     "highlight.js": "^9.12.0",
+    "nuxt": "^1.0.0",
+    "vue-awesome-swiper": "^3.1.3",
     "vue-event-calendar": "^1.5.2",
     "vue-highlight.js": "^2.2.0",
-    "vue-quill-editor": "^3.0.6",
-    "nuxt": "^1.0.0"
+    "vue-quill-editor": "^3.0.6"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

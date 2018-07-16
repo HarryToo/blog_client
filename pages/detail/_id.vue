@@ -80,7 +80,7 @@
         name: "detail",
         head() {
             return {
-                title: `${this.article.title} - ${blog_name}`,
+                title: `${this.article.title}`,
                 meta: [
                     {hid: 'description', name: 'description', content: `${blog_name}, 文章, ${this.article.brief}`},
                     {hid: 'keyword', name: 'keyword', content: `${blog_name}, 文章, ${this.article.title}`}
