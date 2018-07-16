@@ -88,7 +88,7 @@ input {
     border-left: 2px solid rgba(65, 184, 131, 0.5);
     padding-left: 8px;
     line-height: 20px;
-    color: #666;
+    color: #666 !important;
     font-family: "Microsoft YaHei", "黑体", "宋体", sans-serif;
     border-radius: 4px;
     background-color: #f8f8f8 !important;
@@ -96,6 +96,10 @@ input {
 
 .ql-editor {
     padding: 0 !important;
+}
+
+.ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4 {
+    padding-bottom: 10px !important;
 }
 
 .ql-editor p {

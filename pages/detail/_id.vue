@@ -21,7 +21,7 @@
                         </div>
                         <div class="content">
                             <div v-for="(item, index) in article.content" :key="index">
-                                <highlight-code auto v-if="item.isCode" :code="item.cont"></highlight-code>
+                                <highlight-code auto v-if="item.isCode" :code="item.cont.replace(/&nbsp\;/g, ' ')"></highlight-code>
                                 <div class="ql-editor" v-else v-html="item.cont"></div>
                             </div>
                         </div>
