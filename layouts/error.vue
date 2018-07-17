@@ -1,6 +1,5 @@
 <template>
     <section class="error">
-        <vheader></vheader>
         <div class="container">
             <div class="face">
                 <i class="iconfont icon-icon-test"></i>
@@ -15,13 +14,8 @@
     </section>
 </template>
 <script>
-    import vheader from '~/components/vheader'
-
     export default {
-        props: ['error'],
-        components: {
-            vheader
-        }
+        props: ['error']
     }
 </script>
 

@@ -19,7 +19,6 @@ input {
     text-align: center;
     color: #bbb;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .empty_tips:after {
