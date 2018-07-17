@@ -42,9 +42,6 @@
             .ql-editor {
                 padding: 0;
                 font-size: 15px;
-                p{
-                    padding: 4px 0;
-                }
                 img {
                     max-width: 100%;
                 }
