@@ -1,6 +1,6 @@
 <template>
     <div id="index">
-        <banner :bannerList="bannerList"></banner>
+        <banner :bannerList="bannerList" class="animated slideInDown"></banner>
         <div class="container">
             <div class="cont">
                 <div class="left_cont">

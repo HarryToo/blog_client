@@ -12,11 +12,13 @@ module.exports = {
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
             {rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'},
+            {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css'},
             {rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_648952_gpf9jrsouwa.css'},
             {rel: 'stylesheet', href: 'https://cdn.staticfile.org/Swiper/4.3.3/css/swiper.min.css'}
         ]
     },
     loading: {color: '#41b883'},
+    cache: true,
     modules: [
         '@nuxtjs/axios',
         '@nuxtjs/proxy'

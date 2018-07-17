@@ -1,11 +1,12 @@
 <template>
-    <div id="layout" :style="{'background-image': `url(${backdrop})`}">
+    <div id="layout">
         <vheader :logoSrc="logoSrc"></vheader>
         <main>
             <nuxt/>
         </main>
         <vfooter :text="footerText"></vfooter>
         <div class="back_top" title="返回顶部" v-show="showBackTopBtn" @click="backTop"><span>︿</span></div>
+        <div :style="{'background-image': `url(${backdrop})`}" class="bg"></div>
     </div>
 </template>
 
@@ -66,10 +67,6 @@
 
 <style lang="scss" scoped>
     #layout {
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
         overflow-x: hidden;
         @media screen and (max-width: 768px) {
             padding-top: 55px;
@@ -99,6 +96,17 @@
                     animation: backTop_animat1 0.3s linear, backTop_animat2 0.3s 0.3s linear;
                 }
             }
+        }
+        .bg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -99;
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
     }
 
