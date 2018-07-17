@@ -1,23 +1,23 @@
 <template>
-    <div class="business_card">
+    <div class="business_card animated fadeInUp">
         <header class="column_header">
             <i class="iconfont icon-wawa"></i>
             <span>关于</span>
         </header>
         <div class="main" title="更多关于" @click="$router.push('/about')">
             <div class="portrait">
-                <img v-if="portrait.length" :src="portrait | qiniuDomain">
+                <img v-if="businessCardData.portrait.length" :src="businessCardData.portrait | qiniuDomain">
                 <i v-else class="iconfont icon-mianwubiaoqing"></i>
             </div>
-            <p class="nickname">{{nickname}}</p>
-            <p class="self_intro">{{self_intro}}</p>
+            <p class="nickname">{{businessCardData.nickname}}</p>
+            <p class="self_intro">{{businessCardData.self_intro}}</p>
             <ul class="statistics_list">
                 <li>
-                    <p class="num">{{article_total}}</p>
+                    <p class="num">{{articleTotal}}</p>
                     <p class="column">文章</p>
                 </li>
                 <li>
-                    <p class="num">{{label_total}}</p>
+                    <p class="num">{{labelTotal}}</p>
                     <p class="column">标签</p>
                 </li>
             </ul>
@@ -30,38 +30,21 @@
 
     export default {
         name: "businessCard",
-        data() {
-            return {
-                portrait: '',
-                nickname: '',
-                self_intro: '',
-                article_total: '',
-                label_total: ''
-            }
-        },
         filters: {
             qiniuDomain(key) {
                 return `${domain}/${key}`;
             }
         },
-        mounted() {
-            this.$axios.$get('/api/individuation/getIndividuation').then((res) => {
-                if (res.code === 200) {
-                    this.portrait = res.data.portrait;
-                    this.nickname = res.data.nickname;
-                    this.self_intro = res.data.self_intro;
-                }
-            });
-            this.$axios.$get('/api/article/getArticleTotal').then((res) => {
-                if (res.code === 200) {
-                    this.article_total = res.data;
-                }
-            });
-            this.$axios.$get('/api/label/getLabelTotal').then((res) => {
-                if (res.code === 200) {
-                    this.label_total = res.data;
-                }
-            });
+        computed: {
+            businessCardData(){
+                return this.$store.state.businessCardData;
+            },
+            articleTotal(){
+                return this.$store.state.articleTotal;
+            },
+            labelTotal(){
+                return this.$store.state.labelTotal;
+            }
         }
     }
 </script>

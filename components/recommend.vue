@@ -1,6 +1,6 @@
 <template>
     <div class="recommend">
-        <article-list :header="'推荐'" :articleList="articleList"></article-list>
+        <article-list :header="'推荐'" :articleList="recommendList"></article-list>
     </div>
 </template>
 
@@ -12,21 +12,9 @@
         components: {
             articleList
         },
-        data() {
-            return {
-                articleList: []
-            }
-        },
-        mounted() {
-            this.getRecommendArticles();
-        },
-        methods: {
-            getRecommendArticles() {
-                this.$axios.$get('/api/article/getArticleList', {params: {isOnlyTop: true}}).then((res) => {
-                    if (res.code === 200) {
-                        this.articleList = res.data;
-                    }
-                });
+        computed: {
+            recommendList() {
+                return this.$store.state.recommendList;
             }
         }
     }
@@ -34,27 +22,27 @@
 
 <style lang="scss">
     .recommend {
-        .article_list{
+        .article_list {
             .article_item {
                 height: 90px;
-                .cover{
+                .cover {
                     width: 34%;
                 }
-                .text{
+                .text {
                     width: 66%;
-                    .title{
+                    .title {
                         font-size: 14px;
                     }
-                    .brief{
+                    .brief {
                         display: none;
                     }
-                    .addition{
+                    .addition {
                         display: flex;
                         flex-direction: column;
-                        span{
+                        span {
                             font-size: 12px;
                         }
-                        .hits{
+                        .hits {
                             padding-top: 4px;
                         }
                     }

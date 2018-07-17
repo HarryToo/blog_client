@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link :to="{path: '/detail/'+article.id}" class="article_item animated slideInUp">
+    <nuxt-link :to="{path: '/detail/'+article.id}" class="article_item animated fadeInUp">
         <div class="cover" :title="article.title">
             <img v-if="article.cover.length" :src="article.cover | qiniuDomain" :title="article.title">
             <i v-else class="iconfont icon-mianwubiaoqing"> ...</i>

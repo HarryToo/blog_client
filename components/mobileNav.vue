@@ -1,26 +1,26 @@
 <template>
     <nav class="mobile-nav">
-        <ul>
-            <nuxt-link :to="{path: '/'}" tag="li">首页</nuxt-link>
-            <li class="submenu">
+        <div class="menu_list">
+            <nuxt-link :to="{path: '/'}">首页</nuxt-link>
+            <a class="submenu">
                 <header @click="submenuShow = !submenuShow">
                     <span>标签</span>
                     <i :class="`iconfont ${submenuShow?'icon-xiangshang2':'icon-xiangxia2'}`"></i>
                 </header>
                 <div class="submenuList_wrapper">
                     <transition name="slide-down">
-                        <ul v-show="submenuShow">
-                            <nuxt-link tag="li" v-for="item in labelList" :key="item.id"
+                        <div class="submenu_list" v-show="submenuShow">
+                            <nuxt-link v-for="item in labelList" :key="item.id"
                                        :to="{path: '/list/labelArticle/' + item.id, query: {labelName: item.name}}">{{item.name}}
                             </nuxt-link>
-                        </ul>
+                        </div>
                     </transition>
                 </div>
-            </li>
-            <nuxt-link :to="{path: '/diary'}" tag="li">随记</nuxt-link>
-            <nuxt-link :to="{path: '/news'}" tag="li">新闻</nuxt-link>
-            <nuxt-link :to="{path: '/about'}" tag="li">关于</nuxt-link>
-        </ul>
+            </a>
+            <nuxt-link :to="{path: '/diary'}">随记</nuxt-link>
+            <nuxt-link :to="{path: '/news'}">新闻</nuxt-link>
+            <nuxt-link :to="{path: '/about'}">关于</nuxt-link>
+        </div>
     </nav>
 </template>
 
@@ -66,21 +66,24 @@
         left: 0;
         top: 0;
         z-index: 1;
-        width: 70vw;
+        width: 72vw;
         height: 100vh;
         padding: 10px 14px;
-        background-color: #47494e;
+        background-color: #101c17;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         -webkit-overflow-scrolling: touch;
         &::-webkit-scrollbar {
             display: none;
         }
         overflow-y: auto;
-        & > ul {
-            & > li {
+        .menu_list {
+            a {
+                display: block;
+                border-bottom: 1px solid #1a201d;
+            }
+            & > a {
                 padding: 5px 0;
-                color: #eee;
-                border-bottom: 1px solid #515359;
+                color: #ccc;
                 &.nuxt-link-exact-active {
                     color: #41b883;
                     border-color: #41b883;
@@ -93,11 +96,10 @@
                     }
                     .submenuList_wrapper {
                         overflow: hidden;
-                        ul {
-                            li {
+                        .submenu_list {
+                            a {
                                 text-indent: 2em;
-                                color: #ddd;
-                                border-bottom: 1px solid #4d4f55;
+                                color: #bbb;
                                 &.nuxt-link-exact-active {
                                     color: #41b883;
                                     border-color: #41b883;

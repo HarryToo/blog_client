@@ -18,9 +18,6 @@
     export default {
         data() {
             return {
-                logoSrc: '',
-                backdrop: '',
-                footerText: {},
                 showBackTopBtn: false
             }
         },
@@ -28,14 +25,20 @@
             vheader,
             vfooter
         },
+        computed: {
+            logoSrc() {
+                let logo = this.$store.state.individuationData.logo;
+                return logo.length ? `${domain}/${logo}-blog_logo` : '';
+            },
+            backdrop() {
+                let backdrop = this.$store.state.individuationData.backdrop;
+                return backdrop.length ? `${domain}/${backdrop}-blog_bg` : '';
+            },
+            footerText() {
+                return this.$store.state.individuationData.footer_text;
+            }
+        },
         mounted() {
-            this.$axios.$get('/api/individuation/getIndividuation').then((res) => {
-                if (res.code === 200) {
-                    this.logoSrc = res.data.logo.length ? `${domain}/${res.data.logo}-blog_logo` : '';
-                    this.backdrop = res.data.backdrop.length ? `${domain}/${res.data.backdrop}-blog_bg` : '';
-                    this.footerText = res.data.footer_text;
-                }
-            });
             window.addEventListener('scroll', this.switchBackTopBtn);
         },
         methods: {
@@ -97,7 +100,7 @@
                 }
             }
         }
-        .bg{
+        .bg {
             position: fixed;
             top: 0;
             left: 0;

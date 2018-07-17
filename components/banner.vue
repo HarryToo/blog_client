@@ -1,5 +1,5 @@
 <template>
-    <div id="banner">
+    <div id="banner" class="animated fadeInUp">
         <div class="container">
             <div v-swiper:mySwiper="swiperOption" class="pc_swiper" style="height: 320px;">
                 <div class="swiper-wrapper">

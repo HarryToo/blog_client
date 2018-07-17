@@ -21,8 +21,13 @@ input {
     border-radius: 4px;
 }
 
+.empty_tips:before {
+    content: '😭 ';
+    font-size: 32px;
+}
+
 .empty_tips:after {
-    content: '😭 暂无相关内容';
+    content: '暂无相关内容';
 }
 
 .column_header {

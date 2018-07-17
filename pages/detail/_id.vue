@@ -114,7 +114,7 @@
         },
         mounted() {
             this.updateArticleHits();
-            let imgs = document.querySelectorAll('#detail img');
+            let imgs = document.querySelectorAll('#detail .left_cont img');
             for (let i = 0; i < imgs.length; i++) {
                 imgs[i].addEventListener('click', () => {
                     this.viewImgUrl = imgs[i].src;

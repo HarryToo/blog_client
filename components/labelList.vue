@@ -1,5 +1,5 @@
 <template>
-    <div class="label_list">
+    <div class="label_list animated fadeInUp">
         <header class="column_header">
             <i class="iconfont icon-mn_biaoqian"></i>
             <span>标签</span>
@@ -13,28 +13,16 @@
 <script>
     export default {
         name: "labelList",
-        data() {
-            return {
-                labelList: []
-            }
-        },
-        mounted() {
-            this.getLabelList();
-        },
-        methods: {
-            getLabelList() {
-                this.$axios.$get('/api/label/getLabelList').then((res) => {
-                    if (res.code === 200) {
-                        this.labelList = res.data;
-                    }
-                });
+        computed: {
+            labelList() {
+                return this.$store.state.labelList;
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .label_list{
+    .label_list {
         header {
             span {
                 text-shadow: 0 0 12px #fff, 0 0 12px #fff;

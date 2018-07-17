@@ -1,5 +1,5 @@
 <template>
-    <div :class="{fixed: isFixed, right_side: true, animated: true, slideInRight: true}">
+    <div :class="{fixed: isFixed, right_side: true}">
         <business-card></business-card>
         <label-list></label-list>
         <recommend></recommend>
