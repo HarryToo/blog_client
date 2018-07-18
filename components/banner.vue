@@ -99,7 +99,7 @@
                         padding: 8px 10px;
                         text-align: center;
                         font-weight: bold;
-                        background-color: rgba(255, 255, 255, 0.8);
+                        background-color: rgba(255, 255, 255, 0.6);
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
@@ -136,7 +136,7 @@
                         text-align: center;
                         font-size: 14px;
                         font-weight: bold;
-                        background-color: rgba(255, 255, 255, 0.8);
+                        background-color: rgba(255, 255, 255, 0.6);
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
