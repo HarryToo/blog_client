@@ -69,7 +69,7 @@
         width: 72vw;
         height: 100vh;
         padding: 10px 14px;
-        background-color: #101c17;
+        background-color: rgba(255, 255, 255, 0.96);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         -webkit-overflow-scrolling: touch;
         &::-webkit-scrollbar {
@@ -79,11 +79,10 @@
         .menu_list {
             a {
                 display: block;
-                border-bottom: 1px solid #1a201d;
+                border-bottom: 1px solid #eee;
             }
             & > a {
                 padding: 5px 0;
-                color: #ccc;
                 &.nuxt-link-exact-active {
                     color: #41b883;
                     border-color: #41b883;
@@ -99,7 +98,6 @@
                         .submenu_list {
                             a {
                                 text-indent: 2em;
-                                color: #bbb;
                                 &.nuxt-link-exact-active {
                                     color: #41b883;
                                     border-color: #41b883;

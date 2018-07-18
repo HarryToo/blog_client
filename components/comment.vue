@@ -35,7 +35,7 @@
             </li>
         </ul>
         <p v-else style="color: #ccc;text-align: center;padding: 20px 0;">暂无评论</p>
-        <div class="comment_pop" v-show="showPop">评论成功</div>
+        <div class="comment_pop" v-show="showPop">{{message}}</div>
     </div>
 </template>
 
@@ -47,7 +47,8 @@
                 content: '',
                 username: '',
                 commentList: [],
-                showPop: false
+                showPop: false,
+                message: ''
             }
         },
         props: ['articleId'],
@@ -83,12 +84,18 @@
                         if (res.code === 200) {
                             this.commentList = res.data;
                             this.getCommentByArticleId();
-                            this.showPop = true;
+                            this.showMessage('评论成功');
                             this.content = '';
                             this.username = '';
                         }
                     });
+                } else {
+                    this.showMessage('请输入评论内容');
                 }
+            },
+            showMessage(msg) {
+                this.showPop = true;
+                this.message = msg;
             }
         }
     }
@@ -101,7 +108,7 @@
         font-size: 14px;
         header {
             padding-bottom: 10px;
-            .iconfont{
+            .iconfont {
                 padding-right: 6px;
                 vertical-align: middle;
                 color: #41b883;
