@@ -1,8 +1,8 @@
 <template>
     <div class="about">
         <div class="container">
-            <div class="banner">
-                <img v-if="aboutBanner.length" :src="aboutBanner | qiniuDomain" alt="">
+            <div class="banner" v-if="aboutBanner.length">
+                <img :src="aboutBanner | qiniuDomain" alt="">
             </div>
             <div class="content">
                 <div class="ql-editor" v-html="about"></div>
@@ -48,21 +48,18 @@
     .about {
         padding: 6px 0;
         .container {
-            min-height: calc(100vh - 122px);
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
             .banner {
-                margin-bottom: 6px;
-                border-radius: 4px;
-                overflow: hidden;
                 img {
                     display: block;
                     width: 100%;
                 }
             }
             .content {
-                padding: 10px;
-                border-radius: 4px;
-                background-color: rgba(255, 255, 255, 0.9);
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+                padding: 15px 10px 10px;
                 .ql-editor {
                     padding: 0;
                     font-size: 15px;
