@@ -3,7 +3,7 @@
         <header><i class="iconfont icon-mn_hudong"></i><span>留言</span></header>
         <textarea placeholder="既然来了，留下点什么吧 ..." class="comment_cont" v-model="content"></textarea>
         <div style="padding: 10px 0;display: flex;justify-content: space-between;">
-            <input v-model="username" class="comment_user" placeholder="留个名字吧">
+            <input v-model="username" class="comment_user" placeholder="名字或联系方式">
             <button class="comment_btn" @click="submitComment">提交</button>
         </div>
         <ul class="comment_list" v-if="commentList.length">
