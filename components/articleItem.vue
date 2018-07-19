@@ -91,7 +91,6 @@
             .brief {
                 height: 66px;
                 padding-top: 2px;
-                text-indent: 2em;
                 color: #999;
                 font-size: 14px;
                 overflow: hidden;
@@ -100,9 +99,9 @@
                 color: #999;
                 font-size: 14px;
                 & > span {
-                    padding-right: 20px;
+                    padding-right: 24px;
                     i {
-                        padding-right: 4px;
+                        padding-right: 8px;
                         font-size: 14px;
                     }
                 }
@@ -132,10 +131,10 @@
                 font-size: 14px;
             }
             .cover {
-                width: 34%;
+                width: 36%;
             }
             .text {
-                width: 66%;
+                width: 64%;
                 padding-left: 10px;
                 .brief {
                     height: 38px;

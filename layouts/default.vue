@@ -32,7 +32,7 @@
             },
             backdrop() {
                 let backdrop = this.$store.state.individuationData.backdrop;
-                return backdrop.length ? `${domain}/${backdrop}-blog_bg` : '';
+                return backdrop.length ? `${domain}/${backdrop}` : '';
             },
             footerText() {
                 return this.$store.state.individuationData.footer_text;

@@ -5,7 +5,7 @@
                 <img :src="aboutBanner | qiniuDomain" alt="">
             </div>
             <div class="content">
-                <div class="ql-editor" v-html="about"></div>
+                <div class="ql-editor" v-html="aboutArticle"></div>
             </div>
         </div>
     </div>
@@ -17,16 +17,6 @@
 
     export default {
         name: "about",
-        asyncData({app}) {
-            return app.$axios.$get('/api/individuation/getIndividuation').then((res) => {
-                if (res.code === 200) {
-                    return {
-                        about: res.data.about,
-                        aboutBanner: res.data.about_banner
-                    };
-                }
-            });
-        },
         head() {
             return {
                 title: `关于 - ${blog_name}`,
@@ -34,6 +24,14 @@
                     {hid: 'description', name: 'description', content: `${blog_name}, 关于`},
                     {hid: 'keyword', name: 'keyword', content: `${blog_name}, 关于, 博客介绍`}
                 ]
+            }
+        },
+        computed: {
+            aboutBanner() {
+                return this.$store.state.individuationData.about_banner;
+            },
+            aboutArticle() {
+                return this.$store.state.individuationData.about;
             }
         },
         filters: {
