@@ -18,14 +18,14 @@
                 <i class="iconfont icon-im_sousuo_a" style="font-size: 18px;" @click="searchArticle"></i>
             </div>
             <div class="mobile-search-btn tr">
-                <i class="iconfont icon-im_sousuo_a" style="font-size: 22px;" @click="showMobileSearchInput = !showMobileSearchInput"></i>
+                <i class="iconfont icon-im_sousuo_a" style="font-size: 22px;" @click="openMobileSearch"></i>
             </div>
         </div>
 
         <transition name="slide-down">
             <div v-show="showMobileSearchInput" class="mobile-search-input">
-                <input type="text" class="search-input" placeholder="搜索文章" v-model="searchContent" @keyup.enter="searchArticle">
-                <i class="iconfont icon-ln_quxiao" @click="showMobileSearchInput = !showMobileSearchInput"></i>
+                <input type="text" class="search-input" id="mobile_search_input" placeholder="搜索文章" v-model="searchContent" @keyup.enter="searchArticle">
+                <i class="iconfont icon-ln_quxiao" @click="closeMobileSearch"></i>
             </div>
         </transition>
 
@@ -67,9 +67,19 @@
                     this.$router.push({
                         path: '/list/searchArticle/' + this.searchContent.trim()
                     });
-                    this.showMobileSearchInput = false;
                     this.searchContent = '';
+                    this.closeMobileSearch();
                 }
+            },
+            openMobileSearch() {
+                this.showMobileSearchInput = true;
+                setTimeout(() => {
+                    document.getElementById('mobile_search_input').focus();
+                }, 500);
+            },
+            closeMobileSearch() {
+                this.showMobileSearchInput = false;
+                document.getElementById('mobile_search_input').blur();
             },
             openMobileNav() {
                 this.showMobileNav = true;
