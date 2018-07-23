@@ -1,9 +1,9 @@
 <template>
-    <div class="diary">
+    <section class="diary">
         <div class="container">
             <vue-event-calendar :title="title" :events="currMonthEvents" @month-changed="handleMonthChanged"></vue-event-calendar>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

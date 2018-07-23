@@ -3,25 +3,25 @@
         <div class="container">
             <div v-swiper:mySwiper="swiperOption" class="pc_swiper" style="height: 320px;">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="item in bannerList" :key="item.id">
+                    <article class="swiper-slide" v-for="item in bannerList" :key="item.id">
                         <nuxt-link :to="{path: '/detail/'+item.id}" :title="item.title">
                             <img v-if="item.cover.length" :src="item.cover | qiniuDomain" :title="item.title">
                             <i v-else class="iconfont icon-mianwubiaoqing"> ...</i>
-                            <p class="title">{{item.title}}</p>
+                            <header>{{item.title}}</header>
                         </nuxt-link>
-                    </div>
+                    </article>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
             <div v-swiper:mySwiper2="swiperOption2" class="mobile_swiper" style="height: 210px;">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="item in bannerList" :key="item.id">
+                    <article class="swiper-slide" v-for="item in bannerList" :key="item.id">
                         <nuxt-link :to="{path: '/detail/'+item.id}" :title="item.title">
                             <img v-if="item.cover.length" :src="item.cover | qiniuDomain" :title="item.title">
                             <i v-else class="iconfont icon-mianwubiaoqing"> ...</i>
-                            <p class="title">{{item.title}}</p>
+                            <header>{{item.title}}</header>
                         </nuxt-link>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
                         font-size: 100px;
                         color: #ccc;
                     }
-                    .title {
+                    header {
                         position: absolute;
                         left: 0;
                         bottom: 0;
@@ -127,7 +127,7 @@
                         font-size: 80px;
                         color: #ccc;
                     }
-                    .title {
+                    header {
                         position: absolute;
                         left: 0;
                         bottom: 0;

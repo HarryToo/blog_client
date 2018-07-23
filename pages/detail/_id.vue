@@ -19,12 +19,12 @@
                         <div class="cover" v-if="article.cover.length">
                             <img :src="article.cover | qiniuDomain" :title="article.title">
                         </div>
-                        <div class="content">
+                        <article>
                             <div v-for="(item, index) in article.content" :key="index">
                                 <highlight-code auto v-if="item.isCode" :code="item.cont.replace(/&nbsp\;/g, ' ')"></highlight-code>
                                 <div class="ql-editor" v-else v-html="item.cont"></div>
                             </div>
-                        </div>
+                        </article>
                         <comment :articleId="article.id"></comment>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                             border-radius: 4px;
                         }
                     }
-                    .content {
+                    article {
                         margin: 20px 0;
                         padding: 10px 0;
                         font-size: 15px;

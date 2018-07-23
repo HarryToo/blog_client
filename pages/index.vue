@@ -1,5 +1,5 @@
 <template>
-    <div id="index">
+    <section id="index">
         <banner :bannerList="bannerList" class="animated fadeIn"></banner>
         <div class="container">
             <div class="cont">
@@ -9,7 +9,7 @@
                 <right-side></right-side>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

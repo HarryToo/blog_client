@@ -1,5 +1,5 @@
 <template>
-    <div class="news">
+    <section class="news">
         <div class="container">
             <div class="wrapper" v-if="newsList && newsList.length">
                 <i class="refresh_btn iconfont icon-shuaxin" title="刷新" v-show="pageIndex===newsList.length-1" @click="refreshNews"></i>
@@ -24,7 +24,7 @@
             </div>
             <p v-else class="empty_tips"></p>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

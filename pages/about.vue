@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <section class="about">
         <div class="container">
             <div class="banner" v-if="aboutBanner.length">
                 <img :src="aboutBanner | qiniuDomain" alt="">
@@ -8,7 +8,7 @@
                 <div class="ql-editor" v-html="aboutArticle"></div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
