@@ -30,7 +30,7 @@
         methods: {
             scrollFixed() {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-                if (this.offsetTop === '' && document.querySelector('.right_side').style.display !== 'none') {
+                if (this.offsetTop === '' && document.querySelector('.right_side') && document.querySelector('.right_side').style.display !== 'none') {
                     this.offsetTop = document.querySelector('.right_side').offsetTop;
                 }
                 this.isFixed = scrollTop > this.offsetTop;
