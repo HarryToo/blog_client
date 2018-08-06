@@ -13,7 +13,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <div v-swiper:mySwiper2="swiperOption2" class="mobile_swiper" style="height: 32vh;">
+            <div v-swiper:mySwiper2="swiperOption2" class="mobile_swiper" style="height: 36vh;">
                 <div class="swiper-wrapper">
                     <article class="swiper-slide" v-for="item in bannerList" :key="item.id">
                         <nuxt-link :to="{path: '/detail/'+item.id}" :title="item.title">

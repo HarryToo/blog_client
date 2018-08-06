@@ -45,8 +45,18 @@
         &.fixed {
             position: fixed;
             top: 12px;
-            width: calc(1200px * 0.3);
-            margin-left: calc(1200px * 0.7);
+            @media screen and (min-width: 1200px) {
+                width: calc(1200px * 0.3 - 6px);
+                margin-left: calc(1200px * 0.7 - 14px);
+            }
+            @media screen and (min-width: 1024px) and (max-width: 1200px) {
+                width: calc(1024px * 0.3 - 6px);
+                margin-left: calc(1024px * 0.7 - 14px);
+            }
+            @media screen and (min-width: 992px) and (max-width: 1024px) {
+                width: calc(992px * 0.3 - 6px);
+                margin-left: calc(992px * 0.7 - 14px);
+            }
         }
     }
 
