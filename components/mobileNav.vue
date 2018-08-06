@@ -113,7 +113,7 @@
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
         .mobile-nav {
             display: none;
         }

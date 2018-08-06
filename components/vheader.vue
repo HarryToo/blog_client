@@ -132,7 +132,7 @@
         line-height: 40px;
         padding: 10px 0;
         background-color: rgba(255, 255, 255, .95);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
         .container {
             height: 100%;
             display: flex;
@@ -239,7 +239,7 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 769px) {
         header {
             position: fixed;
             top: 0;
@@ -261,7 +261,7 @@
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
         header {
             .mobile-nav-btn {
                 display: none;

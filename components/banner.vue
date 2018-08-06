@@ -13,7 +13,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <div v-swiper:mySwiper2="swiperOption2" class="mobile_swiper" style="height: 210px;">
+            <div v-swiper:mySwiper2="swiperOption2" class="mobile_swiper" style="height: 32vh;">
                 <div class="swiper-wrapper">
                     <article class="swiper-slide" v-for="item in bannerList" :key="item.id">
                         <nuxt-link :to="{path: '/detail/'+item.id}" :title="item.title">
@@ -152,7 +152,7 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 769px) {
         #banner {
             .pc_swiper {
                 display: none;
