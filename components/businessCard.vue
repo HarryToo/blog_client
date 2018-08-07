@@ -75,15 +75,14 @@
             .portrait {
                 width: 84px;
                 height: 84px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.3);
+                line-height: 84px;
+                text-align: center;
                 border-radius: 50%;
+                background-color: #e5f1eb;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
                 img {
                     width: 100%;
-                    min-height: 100%;
                 }
                 i {
                     font-size: 2.4rem;
