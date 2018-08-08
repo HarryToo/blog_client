@@ -49,7 +49,7 @@ module.exports = {
     },
     plugins: [
         {src: '~/plugins/vue-quill-editor.js', ssr: false},
-        {src: '~/plugins/vue-highlight.js', ssr: false},
+        {src: '~/plugins/vue-highlight.js', ssr: true},
         {src: '~/plugins/vue-event-calendar.js', ssr: false},
         {src: '~/plugins/vue-awesome-swiper.js', ssr: false}
     ],
