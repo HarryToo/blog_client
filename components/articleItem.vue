@@ -128,7 +128,7 @@
 
     @media screen and (max-width: 769px) {
         .article_item {
-            height: 16vh;
+            height: 15.2vh;
             .cover {
                 width: 36%;
             }
